@@ -56,6 +56,22 @@ app.post('/users', function(req, res, next){
     res.send(Users).status(200)
 })
 
+app.post('/users/pfp', function(req,res,next){
+    let pfp = req.body;
+
+    currUser.pfp = pfp.pfpUrl;
+
+    res.send(currUser).status(200)
+})
+
+app.post('/users/aboutme', function(req,res,next){
+    let aboutme = req.body;
+
+    currUser.aboutme = aboutme.desc;
+
+    res.send(currUser).status(200)
+})
+
 app.get('/users', function(req, res, next){
     res.send(Users).status(200)
 })
@@ -74,7 +90,7 @@ app.get('/user:username', function(req, res, next){
     username = user
 
     res.render('user', {
-        username: user
+        user: currUser
     })
 })
 
@@ -83,7 +99,7 @@ app.get('/user', function(req, res, next){
     username = currUser.username
 
     res.render('user', {
-        username: username
+        user: currUser
     })
 })
 

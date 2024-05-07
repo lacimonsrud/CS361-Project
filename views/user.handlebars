@@ -11,13 +11,17 @@
 
     <body>
         <ul>
-            <li><a href="/user"></a>Home</li>
+            <li class="active"><a href="/user"></a>Home</li>
             <li class="title">Crochet Patterns</li>
-            <li><a href="/profile">{{username}}</a></li>
+            <li> <a href="/profile">{{user.username}} <img id="user-pfp" src={{user.pfp}}></a></li>
         </ul>
-    </body>
 
-    <div id="popup1" class="hide">
+    <div id="posts">
+
+    </div>
+    
+
+    <div id="popup1">
         <button id="exit-popup1">X</button>
         <p class = "popup-1">You can now visit your profile above!</p>
         <p class = "popup-1">In your profile you can:</p>
@@ -27,6 +31,68 @@
         <p class = "popup-1">-And more!</p>
     </div>
 
+    <div id="popup2">
+        <button id="exit-popup2">X</button>
+        <p class = "popup-2">You can also now make posts!</p>
+        <p class = "popup-2">Click this button to learn more.</p>
+    </div>
+
+    <button id="add-post">+</button>
+
+    <div id="add-post-popup" class="hide">
+
+
+        <button id="exit-add-post">X</button>
+
+        <form id="post-form">
+        <table id="add-post-table" class="center">
+            <tr class="center">
+                <td colspan="2" id="new-pattern-txt">Post New Pattern!</td>
+            </tr>
+
+            <tr class="center">
+                <td colspan="2">Fields with * are required</td>
+            </tr>
+
+            <tr class="center">
+                <td colspan="2"><img id="post-img" src=""></td>
+            </tr>
+
+            <tr>
+                <td>Insert Image URL*</td>
+                <td><input type="url" name="input-pattern-img" id="input-pattern-img" required></td>
+                <td><button id="check-btn">Check Img</button>
+            </tr>
+            
+            <tr>
+                <td>Pattern Name*</td>
+                <td><input type="text" name="input-pattern-name" id="input-pattern-name" required></td>
+            </tr>
+            <tr>
+                <td>Pattern Description</td>
+                <td><input type="text" name="input-pattern-description" id="input-pattern-description"></td>
+            </tr>
+            <tr>
+                <td>Pattern Instructions*</td>
+                <td><input type="text" name="input-pattern-description" id="input-pattern-instructions"></td>
+            </tr>
+             <tr  class="center">
+                    <td colspan="2">
+                        <input  class="center" type="submit">
+                    </td>
+                </tr>
+        </table>
+        </form>
+    </div>
+
+    <div id="popup3" class = "center hide">
+        <p class = "popup-3 center">Are you sure you want to exit before making your post?</p>
+        <p class = "popup-3 center"><button id="yes-exit">Yes</button> <button id="no-exit">No</button></p>
+    </div>
+    
+
     <script src="./js/user.js"></script>
+
+    </body>
     
 </html>

@@ -38,7 +38,7 @@ body{
 }
 
 textarea{
-    resize:none;
+    resize: both;
     height: 20px;
 }
 
@@ -55,7 +55,9 @@ textarea{
 #popup1{
     margin:10px;
     width: fit-content;
-    float: right;
+    position:absolute;
+    top:100px;
+    right:10px;
     background-color: rgb(228, 214, 192);
 }
 
@@ -63,6 +65,8 @@ textarea{
     float: right;
     margin: 0px;
     padding: 0px;
+    top: 100px;
+    right: 0px;
     background-color:transparent;
     height:20px;
     width:20px;
@@ -99,4 +103,244 @@ td{
 
 input{
     background-color:  rgb(228, 214, 192);
+}
+
+#add-post{
+    background-color:  rgb(228, 214, 192);
+    right: 0px;
+    bottom: 0px;
+    position:fixed;
+    border-radius: 100px;
+    height:100px;
+    width:100px;
+    font-size:50px;
+    margin:20px;
+}
+
+.popup-2{
+    display: flex;
+    justify-content: center;
+    margin:10px; 
+    padding-left:10px;
+    padding-right:10px;
+    font-weight:bold;
+    color:rgb(42, 54, 41);
+}
+
+#popup2{
+    margin:10px;
+    width: fit-content;
+    position:absolute;
+    bottom:120px;
+    right:25px;
+    background-color: rgb(228, 214, 192);
+}
+
+.popup-3{
+    display: flex;
+    justify-content: center;
+    margin:10px; 
+    padding-left:10px;
+    padding-right:10px;
+    font-weight:bold;
+    color:rgb(42, 54, 41);
+}
+
+#popup3{
+    margin:auto;
+    position:absolute;
+    top:150px;
+    right:100px;
+    left:100px;
+    width: fit-content;
+    background-color: rgb(228, 214, 192);
+}
+
+
+#exit-popup2{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    background-color:transparent;
+    height:20px;
+    width:20px;
+}
+
+#add-post-popup{
+    margin:auto;
+    margin-top:100px;
+    margin-bottom: auto;
+    padding:20px;
+    width: fit-content;
+    background-color: rgb(228, 214, 192);
+    z-index: 10000;
+    position:absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+}
+
+#exit-add-post{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    background-color:transparent;
+    height:20px;
+    width:20px;
+}
+
+#new-pattern-txt{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button{
+    background-color:  rgb(228, 214, 192);
+}
+
+#input-pattern-instructions{
+   height:100px;
+}
+
+.post{
+    height:200px;
+    width:200px;
+    padding:10px;
+    margin:10px;
+}
+
+#pfp-holder{
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 50px;
+    height:200px;
+    width:200px;
+    border-radius:100px;
+}
+
+#pfp{ 
+    height:200px;
+    width:200px;
+    border-radius:100px;
+}
+
+.pfp-text{
+    font-size: 30px;
+}
+
+#profile{
+    height:fit-content;
+    width:300px;
+    padding:100px;
+    background-color: rgb(228, 214, 192);
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(42, 54, 41);
+}
+
+#pfp-edit{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pfp-edit-modal{
+    z-index: 100000;
+    padding:10px;
+    width: 20%;
+    height: 60%;
+    position: fixed;
+    top:150px;
+    left:100px;
+    right:100px;
+    padding-right:20px;
+    margin-bottom: 200px;
+    background: rgba(0,0,0, .4);
+    margin-left: auto;
+    margin-right:auto;
+}
+
+#pfp-edit-modal-content{
+    margin-top:200px;
+}
+
+#user-pfp{
+    height:50px;
+    width:50px;
+    border-radius: 100px;
+}
+
+#about-me{
+    height:200px;
+    border: 2px solid rgb(42, 54, 41);
+}
+
+#about-me-edit{
+    float:right;
+}
+
+#exit-add-pfp{
+    float: right;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#about-me-edit-modal{
+    z-index: 100000;
+    padding:10px;
+    width: 20%;
+    height: 60%;
+    position: fixed;
+    top:150px;
+    left:100px;
+    right:100px;
+    padding-right:20px;
+    margin-bottom: 200px;
+    background: rgba(0,0,0, .4);
+    margin-left: auto;
+    margin-right:auto;
+}
+
+#about-me-edit-modal-content{
+    margin-top:200px;
+}
+
+#change-about-me{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#input-about-me{
+    resize:both;
+}
+
+.post{
+    background-color: rgb(228, 214, 192);
+    width: 300px;
+    height: 300px;
+    padding-left: auto;
+    padding-right: auto;
+
+}
+
+#posts{
+    display:flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+#post-img-size{
+    left:20px;
+    right:20px;
+    margin:auto;
+    padding:auto;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+#post-img{
+    max-width: 150px;
+    max-height: 150px;
 }

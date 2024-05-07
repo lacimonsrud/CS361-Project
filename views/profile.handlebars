@@ -13,9 +13,53 @@
             <li><a href="/">Sign out</a></li>
         </ul>
 
-        <div>
-            <p>{{user.username}}</p>
-            <p>{{user.email}}</p>
+        <div id="profile">
+
+            <div id="pfp-holder">
+                <img id="pfp" src={{user.pfp}}>
+            </div>
+
+            <div id="profile-content">
+                <button class = "center" id="pfp-edit">Change Profile Picture</button>
+                <p class = "center pfp-text">{{user.username}}</p>
+                <p class = "center pfp-text">{{user.email}}</p>
+                <p class = "center pfp-text">About me:</p>
+                <p class = "center pfp-text" id="about-me">{{user.aboutme}}</p>
+
+                <button class = "center" id="about-me-edit">Edit</button>
+            </div>
+
         </div>
+
+        <div class = "hide" id="pfp-edit-modal">
+            <table id="pfp-edit-modal-content">
+                <button id="exit-add-pfp">X</button>
+                <tr>
+                    <td>Enter new img url</td>
+                    <td><input type="text" name="input-pfp-url" id="input-pfp-url" required></td>
+                </tr>
+                 <tr class = "center" >
+                    <td colspan="2"><button id="change-pfp">Change</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class = "hide" id="about-me-edit-modal">
+            <table class = "center" id="about-me-edit-modal-content">
+                <button id="exit-about-me-pfp">X</button>
+                <tr>
+                    <td>Enter info about you!</td>
+                    <td><textarea type="textarea" name="input-about-me" id="input-about-me" required></textarea></td>
+                </tr>
+                 <tr class = "center" >
+                    <td class = "center"  colspan="2"><button id="change-about-me">Change</button></td>
+                </tr>
+            </table>
+        </div>
+
     </body>
+
+    <script src="./js/profile.js"></script>
+
+
 </html>
